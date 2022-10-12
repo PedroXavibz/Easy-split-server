@@ -18,7 +18,7 @@
   "venv": "env",
   "reportMissingImports": true,
   "reportMissingTypeStubs": false,
-  "pythonVersion": "3.6",
+  "pythonVersion": "3.8",
   "pythonPlatform": "Linux",
   "executionEnvironments": [
     {
