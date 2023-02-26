@@ -5,6 +5,7 @@ load_dotenv()
 
 
 class Config:
+    ORIGIN = os.getenv(key='ORIGIN', default='http://localhost:3000')
     HOST = os.getenv(key='HOST', default='localhost')
     PORT = int(os.getenv(key='PORT', default=5000))
     DEBUG = bool(os.getenv(key='DEBUG', default=True))

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from api.router import upload
 from utils.catch_exceptions import add_exception_handlers
 from fastapi.middleware.cors import CORSMiddleware
+from core.config import Config
 
 
 class App:
@@ -17,7 +18,7 @@ class App:
     def include_middlewares(self):
         self.app.add_middleware(
             CORSMiddleware,
-            allow_origins=['http://localhost:3000'],
+            allow_origins=[Config.ORIGIN],
             allow_methods=["*"],
             allow_headers=["*"],
         )
