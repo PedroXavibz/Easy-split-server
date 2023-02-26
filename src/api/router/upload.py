@@ -24,7 +24,7 @@ async def upload_file(file: Union[UploadFile, None] = File(...), background_task
         raise AppError(message='File format not allowed',
                        status_code=status.HTTP_400_BAD_REQUEST)
     elif not is_valid_size:
-        raise AppError(message='File size must be less than 500Mb',
+        raise AppError(message='File size must be less than 20Mb',
                        status_code=status.HTTP_400_BAD_REQUEST)
 
     file_info = await controller_uploader.save(filename=file.filename, contents=contents)

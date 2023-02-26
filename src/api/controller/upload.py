@@ -7,7 +7,7 @@ from utils.handle_file import handle_file
 
 class ControllerUpload:
     _allowed = ['ISO Media, MP4 v2 [ISO 14496-14]']
-    _max_file_size = 500 * 1048576  # 500Mb to bytes
+    _max_file_size = 20 * 1048576  # 500Mb to bytes
 
     def _create_upload_folder(self):
         tmp_dir = tempfile.mkdtemp()
